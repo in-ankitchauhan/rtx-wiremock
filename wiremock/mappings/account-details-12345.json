@@ -5,7 +5,7 @@
     "urlPath": "/customer/account-details",
     "bodyPatterns": [
       {
-        "matchesJsonPath": "$[?(@.accountNumber == '12345'  || @.invoiceNumber == 'INV-1001')]"
+        "matchesJsonPath": "$[?(@.accountNumber == '12345'  || @.invoiceNumber == 'INV111111')]"
       }
     ]
   },
@@ -47,21 +47,24 @@
           "amount": 250.0,
           "invoiceDate": "2026-08-01",
           "invoiceDueDate": "2026-08-31",
-          "isPayable": true
+          "isPayable": true,
+          "isVerifiable": true
         },
         {
           "invoiceNumber": "INV222222",
           "amount": 175.5,
           "invoiceDate": "2026-07-01",
           "invoiceDueDate": "2026-08-01",
-          "isPayable": true
+          "isPayable": true,
+          "isVerifiable": true
         },
         {
           "invoiceNumber": "INV000000",
           "amount": 50.0,
           "invoiceDate": "2026-06-01",
           "invoiceDueDate": "2026-07-01",
-          "isPayable": false
+          "isPayable": false,
+          "isVerifiable": false
         }
       ]
     }
