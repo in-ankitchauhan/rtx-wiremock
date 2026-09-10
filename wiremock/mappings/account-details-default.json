@@ -1,5 +1,5 @@
 {
-  "id": "acct-default-0000-4000-8000-000000000007",
+  "id": "acct-default",
   "priority": 100,
   "request": {
     "method": "POST",
