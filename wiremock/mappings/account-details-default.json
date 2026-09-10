@@ -1,0 +1,16 @@
+{
+  "id": "acct-default-0000-4000-8000-000000000007",
+  "priority": 100,
+  "request": {
+    "method": "POST",
+    "urlPath": "/customer/account-details"
+  },
+  "response": {
+    "status": 400,
+    "headers": {"Content-Type": "application/json"},
+    "jsonBody": {
+      "status": "error",
+      "message": "Mock: provide exactly one supported test accountNumber or invoiceNumber"
+    }
+  }
+}

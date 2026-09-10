@@ -1,0 +1,67 @@
+{
+  "id": "22222222-2222-4222-8222-222222222222",
+  "request": {
+    "method": "POST",
+    "urlPath": "/api/gateway",
+    "queryParameters": {"api": {"equalTo": "phone_search"}},
+    "bodyPatterns": [
+      {"matchesJsonPath": "$[?(@.phone == '2222222222')]"}
+    ]
+  },
+  "response": {
+    "status": 200,
+    "headers": {"Content-Type": "application/json"},
+    "jsonBody": {
+      "status": "success",
+      "count": 2,
+      "twilio_lookup": {},
+      "mission_results": [],
+      "pestpac_results": [
+        {
+          "BillToCode": "12345",
+          "LocationCode": "LOC12345",
+          "LocationID": "10001",
+          "display_name": "John Doe",
+          "CreditStatus": "Good",
+          "Email": "john.doe@example.com",
+          "Phone": "2222222222",
+          "Address": "742 Evergreen Terrace",
+          "City": "Dallas",
+          "State": "TX",
+          "Zip": "75201",
+          "branch_number": "DAL01",
+          "branchID": "DAL",
+          "brand": "Rentokil",
+          "region": "Northeast",
+          "market": "Dallas",
+          "division": "Residential",
+          "pest_service": true,
+          "term_service": false,
+          "lawn_service": false
+        },
+        {
+          "BillToCode": "67890",
+          "LocationCode": "LOC67890",
+          "LocationID": "10002",
+          "display_name": "Jane Smith",
+          "CreditStatus": "Good",
+          "Email": "jane.smith@example.com",
+          "Phone": "2222222222",
+          "Address": "100 Congress Ave",
+          "City": "Austin",
+          "State": "TX",
+          "Zip": "78701",
+          "branch_number": "AUS01",
+          "branchID": "AUS",
+          "brand": "Rentokil",
+          "region": "Northeast",
+          "market": "Austin",
+          "division": "Commercial",
+          "pest_service": true,
+          "term_service": true,
+          "lawn_service": false
+        }
+      ]
+    }
+  }
+}

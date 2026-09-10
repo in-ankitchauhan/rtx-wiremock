@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: rtx-wiremock
+    runtime: docker
+    plan: free
+    autoDeploy: true
+    healthCheckPath: /__admin/mappings

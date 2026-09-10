@@ -1,0 +1,16 @@
+{
+  "id": "err50000-5000-4500-8500-000000000001",
+  "priority": 30,
+  "request": {
+    "method": "POST",
+    "urlPath": "/customer/account-details",
+    "bodyPatterns": [
+      {"matchesJsonPath": "$[?(@.accountNumber == '50000')]"}
+    ]
+  },
+  "response": {
+    "status": 500,
+    "headers": {"Content-Type": "application/json"},
+    "jsonBody": {"status": "error", "message": "Simulated account-details backend failure"}
+  }
+}

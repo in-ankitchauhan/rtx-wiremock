@@ -1,0 +1,20 @@
+{
+  "id": "phone-default-0000-4000-8000-000000000006",
+  "priority": 100,
+  "request": {
+    "method": "POST",
+    "urlPath": "/api/gateway",
+    "queryParameters": {"api": {"equalTo": "phone_search"}}
+  },
+  "response": {
+    "status": 200,
+    "headers": {"Content-Type": "application/json"},
+    "jsonBody": {
+      "status": "success",
+      "count": 0,
+      "twilio_lookup": {},
+      "mission_results": [],
+      "pestpac_results": []
+    }
+  }
+}

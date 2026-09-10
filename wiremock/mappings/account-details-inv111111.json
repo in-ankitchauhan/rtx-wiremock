@@ -1,0 +1,27 @@
+{
+  "id": "inv11111-1111-4111-8111-111111111111",
+  "priority": 20,
+  "request": {
+    "method": "POST",
+    "urlPath": "/customer/account-details",
+    "bodyPatterns": [
+      {"matchesJsonPath": "$[?(@.invoiceNumber == 'INV111111' && @.accountNumber == null)]"}
+    ]
+  },
+  "response": {
+    "status": 200,
+    "headers": {"Content-Type": "application/json"},
+    "jsonBody": {
+      "sourceSystem": "PestPac",
+      "accountNumber": "12345",
+      "customer": {
+        "profile": {"firstName": "John", "lastName": "Doe", "email": "john.doe@example.com", "phone": "2222222222"},
+        "billToAddress": {"addressLine1": "742 Evergreen Terrace", "addressLine2": "", "city": "Dallas", "state": "TX", "zip": "75201"},
+        "serviceAddresses": [{"locationId": "10001", "addressLine1": "742 Evergreen Terrace", "city": "Dallas", "state": "TX", "zip": "75201"}]
+      },
+      "invoices": [
+        {"invoiceNumber": "INV111111", "amount": 250.00, "invoiceDate": "2026-08-01", "invoiceDueDate": "2026-08-31", "isPayable": true}
+      ]
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "inv33333-3333-4333-8333-333333333333",
+  "priority": 20,
+  "request": {
+    "method": "POST",
+    "urlPath": "/customer/account-details",
+    "bodyPatterns": [
+      {"matchesJsonPath": "$[?(@.invoiceNumber == 'INV333333' && @.accountNumber == null)]"}
+    ]
+  },
+  "response": {
+    "status": 200,
+    "headers": {"Content-Type": "application/json"},
+    "jsonBody": {
+      "sourceSystem": "PestPac",
+      "accountNumber": "67890",
+      "customer": {
+        "profile": {"firstName": "Jane", "lastName": "Smith", "email": "jane.smith@example.com", "phone": "2222222222"},
+        "billToAddress": {"addressLine1": "100 Congress Ave", "addressLine2": "Suite 400", "city": "Austin", "state": "TX", "zip": "78701"},
+        "serviceAddresses": [{"locationId": "10002", "addressLine1": "100 Congress Ave", "city": "Austin", "state": "TX", "zip": "78701"}]
+      },
+      "invoices": [
+        {"invoiceNumber": "INV333333", "amount": 500.00, "invoiceDate": "2026-08-05", "invoiceDueDate": "2026-09-04", "isPayable": true}
+      ]
+    }
+  }
+}

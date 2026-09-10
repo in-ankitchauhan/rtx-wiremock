@@ -1,0 +1,38 @@
+{
+  "id": "a9999900-9999-4999-8999-999900000001",
+  "priority": 10,
+  "request": {
+    "method": "POST",
+    "urlPath": "/customer/account-details",
+    "bodyPatterns": [
+      {"matchesJsonPath": "$[?(@.accountNumber == '99999' && @.invoiceNumber == null)]"}
+    ]
+  },
+  "response": {
+    "status": 200,
+    "headers": {"Content-Type": "application/json"},
+    "jsonBody": {
+      "sourceSystem": "PestPac",
+      "accountNumber": "99999",
+      "customer": {
+        "profile": {
+          "firstName": "Alex",
+          "lastName": "ZeroBalance",
+          "email": "alex.zero@example.com",
+          "phone": "3333333333"
+        },
+        "billToAddress": {
+          "addressLine1": "1 No Balance Way",
+          "addressLine2": "",
+          "city": "Dallas",
+          "state": "TX",
+          "zip": "75202"
+        },
+        "serviceAddresses": []
+      },
+      "invoices": [
+        {"invoiceNumber": "INV999900", "amount": 0.00, "invoiceDate": "2026-07-01", "invoiceDueDate": "2026-08-01", "isPayable": false}
+      ]
+    }
+  }
+}
