@@ -1,5 +1,4 @@
 {
-  "id": "pay-default-0000",
   "priority": 100,
   "request": {
     "method": "PUT",
@@ -7,7 +6,9 @@
   },
   "response": {
     "status": 200,
-    "headers": {"Content-Type": "application/json"},
+    "headers": {
+      "Content-Type": "application/json"
+    },
     "jsonBody": {
       "Status": "Success",
       "StatusReason": "Approved",

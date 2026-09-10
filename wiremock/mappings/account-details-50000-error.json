@@ -4,12 +4,19 @@
     "method": "POST",
     "urlPath": "/customer/account-details",
     "bodyPatterns": [
-      {"matchesJsonPath": "$[?(@.accountNumber == '50000')]"}
+      {
+        "matchesJsonPath": "$[?(@.accountNumber == '50000')]"
+      }
     ]
   },
   "response": {
     "status": 500,
-    "headers": {"Content-Type": "application/json"},
-    "jsonBody": {"status": "error", "message": "Simulated account-details backend failure"}
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "status": "error",
+      "message": "Simulated account-details backend failure"
+    }
   }
 }

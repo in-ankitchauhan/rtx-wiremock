@@ -1,16 +1,23 @@
 {
-  "id": "33333333",
   "request": {
     "method": "POST",
     "urlPath": "/api/gateway",
-    "queryParameters": {"api": {"equalTo": "phone_search"}},
+    "queryParameters": {
+      "api": {
+        "equalTo": "phone_search"
+      }
+    },
     "bodyPatterns": [
-      {"matchesJsonPath": "$[?(@.phone == '3333333333')]"}
+      {
+        "matchesJsonPath": "$[?(@.phone == '3333333333')]"
+      }
     ]
   },
   "response": {
     "status": 200,
-    "headers": {"Content-Type": "application/json"},
+    "headers": {
+      "Content-Type": "application/json"
+    },
     "jsonBody": {
       "status": "success",
       "count": 0,

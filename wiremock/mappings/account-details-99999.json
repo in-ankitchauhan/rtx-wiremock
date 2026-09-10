@@ -4,12 +4,16 @@
     "method": "POST",
     "urlPath": "/customer/account-details",
     "bodyPatterns": [
-      {"matchesJsonPath": "$[?(@.accountNumber == '99999' && @.invoiceNumber == null)]"}
+      {
+        "matchesJsonPath": "$[?(@.accountNumber == '99999' && @.invoiceNumber == null)]"
+      }
     ]
   },
   "response": {
     "status": 200,
-    "headers": {"Content-Type": "application/json"},
+    "headers": {
+      "Content-Type": "application/json"
+    },
     "jsonBody": {
       "sourceSystem": "PestPac",
       "accountNumber": "99999",
@@ -30,7 +34,13 @@
         "serviceAddresses": []
       },
       "invoices": [
-        {"invoiceNumber": "INV999900", "amount": 0.00, "invoiceDate": "2026-07-01", "invoiceDueDate": "2026-08-01", "isPayable": false}
+        {
+          "invoiceNumber": "INV999900",
+          "amount": 0.0,
+          "invoiceDate": "2026-07-01",
+          "invoiceDueDate": "2026-08-01",
+          "isPayable": false
+        }
       ]
     }
   }

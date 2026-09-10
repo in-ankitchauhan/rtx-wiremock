@@ -1,5 +1,4 @@
 {
-  "id": "acct-default",
   "priority": 100,
   "request": {
     "method": "POST",
@@ -7,7 +6,9 @@
   },
   "response": {
     "status": 400,
-    "headers": {"Content-Type": "application/json"},
+    "headers": {
+      "Content-Type": "application/json"
+    },
     "jsonBody": {
       "status": "error",
       "message": "Mock: provide exactly one supported test accountNumber or invoiceNumber"

@@ -4,12 +4,16 @@
     "method": "POST",
     "urlPath": "/customer/account-details",
     "bodyPatterns": [
-      {"matchesJsonPath": "$[?(@.accountNumber == '12345' && @.invoiceNumber == null)]"}
+      {
+        "matchesJsonPath": "$[?(@.accountNumber == '12345' && @.invoiceNumber == null)]"
+      }
     ]
   },
   "response": {
     "status": 200,
-    "headers": {"Content-Type": "application/json"},
+    "headers": {
+      "Content-Type": "application/json"
+    },
     "jsonBody": {
       "sourceSystem": "PestPac",
       "accountNumber": "12345",
@@ -38,9 +42,27 @@
         ]
       },
       "invoices": [
-        {"invoiceNumber": "INV111111", "amount": 250.00, "invoiceDate": "2026-08-01", "invoiceDueDate": "2026-08-31", "isPayable": true},
-        {"invoiceNumber": "INV222222", "amount": 175.50, "invoiceDate": "2026-07-01", "invoiceDueDate": "2026-08-01", "isPayable": true},
-        {"invoiceNumber": "INV000000", "amount": 50.00, "invoiceDate": "2026-06-01", "invoiceDueDate": "2026-07-01", "isPayable": false}
+        {
+          "invoiceNumber": "INV111111",
+          "amount": 250.0,
+          "invoiceDate": "2026-08-01",
+          "invoiceDueDate": "2026-08-31",
+          "isPayable": true
+        },
+        {
+          "invoiceNumber": "INV222222",
+          "amount": 175.5,
+          "invoiceDate": "2026-07-01",
+          "invoiceDueDate": "2026-08-01",
+          "isPayable": true
+        },
+        {
+          "invoiceNumber": "INV000000",
+          "amount": 50.0,
+          "invoiceDate": "2026-06-01",
+          "invoiceDueDate": "2026-07-01",
+          "isPayable": false
+        }
       ]
     }
   }

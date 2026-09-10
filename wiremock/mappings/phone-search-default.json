@@ -1,14 +1,19 @@
 {
-  "id": "phone-default",
   "priority": 100,
   "request": {
     "method": "POST",
     "urlPath": "/api/gateway",
-    "queryParameters": {"api": {"equalTo": "phone_search"}}
+    "queryParameters": {
+      "api": {
+        "equalTo": "phone_search"
+      }
+    }
   },
   "response": {
     "status": 200,
-    "headers": {"Content-Type": "application/json"},
+    "headers": {
+      "Content-Type": "application/json"
+    },
     "jsonBody": {
       "status": "success",
       "count": 0,
