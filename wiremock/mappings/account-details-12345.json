@@ -1,5 +1,4 @@
 {
-  "id": "a1234500",
   "priority": 10,
   "request": {
     "method": "POST",
