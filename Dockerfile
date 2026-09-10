@@ -5,4 +5,4 @@ COPY wiremock/__files /home/wiremock/__files
 
 EXPOSE 8080
 
-ENTRYPOINT ["/docker-entrypoint.sh", "--global-response-templating", "--disable-banner"]
+ENTRYPOINT ["/docker-entrypoint.sh", "--port", "8080", "--global-response-templating", "--disable-banner"]
