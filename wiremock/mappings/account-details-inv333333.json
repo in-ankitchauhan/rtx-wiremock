@@ -5,7 +5,7 @@
     "urlPath": "/customer/account-details",
     "bodyPatterns": [
       {
-        "matchesJsonPath": "$[?(@.invoiceNumber == 'INV333333' && @.accountNumber == null)]"
+        "matchesJsonPath": "$[?(@.invoiceNumber == '33333')]"
       }
     ]
   },
@@ -43,11 +43,12 @@
       },
       "invoices": [
         {
-          "invoiceNumber": "INV333333",
-          "amount": 500.0,
+          "invoiceNumber": "33333",
+          "amount": 10.0,
           "invoiceDate": "2026-08-05",
           "invoiceDueDate": "2026-09-04",
-          "isPayable": true
+          "isPayable": false,
+          "isVerifiable":false
         }
       ]
     }
