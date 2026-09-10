@@ -1,5 +1,5 @@
 {
-  "id": "pay-failure-0000-4000-8000-000000000002",
+  "id": "pay-failure",
   "priority": 5,
   "request": {
     "method": "PUT",
