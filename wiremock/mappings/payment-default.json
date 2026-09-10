@@ -1,5 +1,5 @@
 {
-  "id": "pay-default",
+  "id": "pay-default-0000",
   "priority": 100,
   "request": {
     "method": "PUT",
