@@ -47,14 +47,16 @@
           "amount": 500.0,
           "invoiceDate": "2026-08-05",
           "invoiceDueDate": "2026-09-04",
-          "isPayable": true
+          "isPayable": true,
+          "isVerifiable": true
         },
         {
           "invoiceNumber": "INV444444",
           "amount": 300.0,
           "invoiceDate": "2026-07-05",
           "invoiceDueDate": "2026-08-04",
-          "isPayable": true
+          "isPayable": true,
+          "isVerifiable": true
         }
       ]
     }
