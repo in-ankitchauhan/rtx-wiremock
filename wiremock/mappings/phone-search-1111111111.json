@@ -25,8 +25,8 @@
       "mission_results": [],
       "pestpac_results": [
         {
-          "BillToCode": "12345",
-          "LocationCode": "LOC12345",
+          "BillToCode": "54321",
+          "LocationCode": "LOC54321",
           "LocationID": "10001",
           "display_name": "John Doe",
           "CreditStatus": "Good",
