@@ -9,7 +9,7 @@
     },
     "bodyPatterns": [
       {
-        "matchesJsonPath": "$[?(@.phone == '1111111111')]"
+        "contains": "\"phone\": \"+11111111111\""
       }
     ]
   },
