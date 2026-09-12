@@ -1,0 +1,72 @@
+{
+  "priority": 10,
+  "request": {
+    "method": "POST",
+    "urlPath": "/customer/account-details",
+    "bodyPatterns": [
+      {
+        "matchesJsonPath": "$[?(@.accountNumber == '54321'  || @.invoiceNumber == '654321')]"
+      }
+    ]
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "sourceSystem": "PestPac",
+      "accountNumber": "54321",
+      "customer": {
+        "profile": {
+          "firstName": "John",
+          "lastName": "Doe",
+          "email": "john.doe@example.com",
+          "phone": "2222222222"
+        },
+        "billToAddress": {
+          "addressLine1": "742 Evergreen Terrace",
+          "addressLine2": "",
+          "city": "Dallas",
+          "state": "TX",
+          "zip": "75201"
+        },
+        "serviceAddresses": [
+          {
+            "locationId": "10001",
+            "addressLine1": "742 Evergreen Terrace",
+            "city": "Dallas",
+            "state": "TX",
+            "zip": "75201"
+          }
+        ]
+      },
+      "invoices": [
+        {
+          "invoiceNumber": "654321",
+          "amount": 250.0,
+          "invoiceDate": "2026-08-01",
+          "invoiceDueDate": "2026-08-31",
+          "isPayable": true,
+          "isVerifiable": true
+        },
+        {
+          "invoiceNumber": "222222",
+          "amount": 175.5,
+          "invoiceDate": "2026-07-01",
+          "invoiceDueDate": "2026-08-01",
+          "isPayable": true,
+          "isVerifiable": true
+        },
+        {
+          "invoiceNumber": "333333",
+          "amount": 50.0,
+          "invoiceDate": "2026-06-01",
+          "invoiceDueDate": "2026-07-01",
+          "isPayable": false,
+          "isVerifiable": false
+        }
+      ]
+    }
+  }
+}
