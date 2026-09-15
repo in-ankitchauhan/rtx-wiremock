@@ -1,0 +1,21 @@
+{
+  "priority": 1,
+  "request": {
+    "method": "PUT",
+    "urlPath": "/V2/MakeOneTimePayment",
+    "bodyPatterns": [
+      {
+        "matchesJsonPath": "$[?(@.PaymentMethod.SecurityCode == '126')]"
+      }
+    ]
+  },
+  "response": {
+    "status": 502,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "error": "Bad Gateway"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "priority": 1,
+  "request": {
+    "method": "PUT",
+    "urlPath": "/V2/MakeOneTimePayment",
+    "bodyPatterns": [
+      {
+        "matchesJsonPath": "$[?(@.PaymentMethod.SecurityCode == '120')]"
+      }
+    ]
+  },
+  "response": {
+    "status": 400,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "Status": "Failure",
+      "StatusReason": "Invalid card credentials",
+      "TransactionIdentifier": "",
+      "PestPacBalanceUpdateStatus": "NotAttempted"
+    }
+  }
+}

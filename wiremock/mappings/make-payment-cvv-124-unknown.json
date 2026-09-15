@@ -1,0 +1,22 @@
+{
+  "priority": 1,
+  "request": {
+    "method": "PUT",
+    "urlPath": "/V2/MakeOneTimePayment",
+    "bodyPatterns": [
+      {
+        "matchesJsonPath": "$[?(@.PaymentMethod.SecurityCode == '124')]"
+      }
+    ]
+  },
+  "response": {
+    "status": 400,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "Unknown": "Success",
+      "PestPacBalanceUpdateStatus": "NotAttempted"
+    }
+  }
+}

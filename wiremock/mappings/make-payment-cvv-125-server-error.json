@@ -1,0 +1,21 @@
+{
+  "priority": 1,
+  "request": {
+    "method": "PUT",
+    "urlPath": "/V2/MakeOneTimePayment",
+    "bodyPatterns": [
+      {
+        "matchesJsonPath": "$[?(@.PaymentMethod.SecurityCode == '125')]"
+      }
+    ]
+  },
+  "response": {
+    "status": 500,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "error": "something went wrong"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "priority": 1,
+  "request": {
+    "method": "PUT",
+    "urlPath": "/V2/MakeOneTimePayment",
+    "bodyPatterns": [
+      {
+        "matchesJsonPath": "$[?(@.PaymentMethod.SecurityCode == '121')]"
+      }
+    ]
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "Status": "Success",
+      "StatusReason": "Approved",
+      "TransactionIdentifier": "TXN-TEST-121",
+      "PestPacBalanceUpdateStatus": "Success"
+    }
+  }
+}
