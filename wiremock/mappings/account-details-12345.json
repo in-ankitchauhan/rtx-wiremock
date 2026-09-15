@@ -5,7 +5,7 @@
     "urlPath": "/customer/account-details",
     "bodyPatterns": [
       {
-        "matchesJsonPath": "$[?(@.accountNumber == '12345'  || @.invoiceNumber == 'INV111111')]"
+        "matchesJsonPath": "$[?(@.accountNumber == '12345'  || @.invoiceNumber == '56890')]"
       }
     ]
   },
@@ -43,28 +43,38 @@
       },
       "invoices": [
         {
-          "invoiceNumber": "INV111111",
-          "amount": 250.0,
-          "invoiceDate": "2026-08-01",
-          "invoiceDueDate": "2026-08-31",
+          "invoiceNumber": "123C",
+          "invoiceType": "Consolidated",
+          "consolidatedInvoiceNumber": null,
+          "childInvoiceNumbers": ["56890", "56891"],
+          "amount": 15000.00,
+          "invoiceDate": "20201115",
+          "invoiceDueDate": "20201215",
           "isPayable": true,
+          "isPresentable": true,
           "isVerifiable": true
         },
         {
-          "invoiceNumber": "INV222222",
-          "amount": 175.5,
-          "invoiceDate": "2026-07-01",
-          "invoiceDueDate": "2026-08-01",
+          "invoiceNumber": "56890",
+          "invoiceType": "Standard",
+          "consolidatedInvoiceNumber": "123C",
+          "amount": 10234.39,
+          "invoiceDate": "20201115",
+          "invoiceDueDate": "20201215",
           "isPayable": true,
+          "isPresentable": false,
           "isVerifiable": true
         },
         {
-          "invoiceNumber": "INV000000",
-          "amount": 50.0,
-          "invoiceDate": "2026-06-01",
-          "invoiceDueDate": "2026-07-01",
-          "isPayable": false,
-          "isVerifiable": false
+          "invoiceNumber": "56892",
+          "invoiceType": "Standard",
+          "consolidatedInvoiceNumber": null,
+          "amount": 250.00,
+          "invoiceDate": "20201120",
+          "invoiceDueDate": "20201220",
+          "isPayable": true,
+          "isPresentable": true,
+          "isVerifiable": true
         }
       ]
     }
