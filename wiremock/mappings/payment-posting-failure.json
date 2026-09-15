@@ -12,7 +12,11 @@
     "response": {
       "status": 400,
       "jsonBody": {
-        "error": "Payment declined"
+        "error": "Payment declined",
+        "Status": "Failure",
+        "StatusReason": "Invalid card credentials",
+        "TransactionIdentifier": "",
+        "PestPacBalanceUpdateStatus": "Failure"
       }
     }
 }
