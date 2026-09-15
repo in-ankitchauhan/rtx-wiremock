@@ -1,0 +1,24 @@
+{
+  "priority": 5,
+  "request": {
+    "method": "PUT",
+    "urlPath": "/V2/MakeOneTimePayment",
+    "bodyPatterns": [
+      {
+        "matchesJsonPath": "$[?(@.CustomerIdentifier =~ /^\\d+$/)]"
+      },
+      {
+        "matchesJsonPath": "$[?(@.PaymentMethod.SecurityCode =~ /.*[1-9]$/)]"
+      }
+    ]
+  },
+  "response": {
+    "status": 200,
+    "jsonBody": {
+      "Status": "Success",
+      "StatusReason": "Approved",
+      "TransactionIdentifier": "TXN-TEST-100001",
+      "PestPacBalanceUpdateStatus": "Success"
+    }
+  }
+}
