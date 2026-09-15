@@ -5,7 +5,7 @@
       "urlPath": "/V2/MakeOneTimePayment",
       "bodyPatterns": [
         {
-          "matchesJsonPath": "$[?(@.securityCode =~ /.*0$/)]"
+          "matchesJsonPath": "$[?(@.PaymentMethod.SecurityCode =~ /.*0$/)]"
         }
       ]
     },
