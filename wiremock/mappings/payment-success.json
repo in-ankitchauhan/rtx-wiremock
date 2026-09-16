@@ -1,11 +1,11 @@
 {
-  "priority": 5,
+  "priority": 3,
   "request": {
     "method": "PUT",
     "urlPath": "/V2/MakeOneTimePayment",
     "bodyPatterns": [
       {
-        "matchesJsonPath": "$[?(@.CustomerIdentifier == 'TEST_SUCCESS')]"
+        "matchesJsonPath": "$[?(@.PaymentMethod.PaymentType == 'ACH')]"
       }
     ]
   },
