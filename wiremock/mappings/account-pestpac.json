@@ -1,0 +1,84 @@
+{
+  "priority": 10,
+  "request": {
+    "method": "POST",
+    "urlPath": "/customer/account-details",
+    "bodyPatterns": [
+      {
+        "matchesJsonPath": "$[?(@.accountNumber == '3698222' || @.invoiceNumber == '20101' || @.invoiceNumber == '20102' || @.invoiceNumber == '20103')]"
+      }
+    ]
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "sourceSystem": "PestPac",
+      "accountNumber": "3698222",
+      "customer": {
+        "profile": {
+          "firstName": "Sandy",
+          "lastName": "H.",
+          "email": "sandy@example.com",
+          "phone": "5551234567"
+        },
+        "billToAddress": {
+          "addressLine1": "8625 Hirst Rd",
+          "addressLine2": "",
+          "city": "Heath",
+          "state": "OH",
+          "zip": "43056"
+        },
+        "serviceAddresses": [
+          {
+            "locationId": "LOC201",
+            "addressLine1": "8625 Hirst Rd",
+            "city": "Heath",
+            "state": "OH",
+            "zip": "43056"
+          }
+        ]
+      },
+      "invoices": [
+        {
+          "invoiceNumber": "20101",
+          "invoiceType": "Standard",
+          "consolidatedInvoiceNumber": null,
+          "childInvoiceNumbers": [],
+          "amount": 120.0,
+          "invoiceDate": "20260715",
+          "invoiceDueDate": "20260715",
+          "isPayable": true,
+          "isPresentable": true,
+          "isVerifiable": true
+        },
+        {
+          "invoiceNumber": "20102",
+          "invoiceType": "Standard",
+          "consolidatedInvoiceNumber": null,
+          "childInvoiceNumbers": [],
+          "amount": 80.0,
+          "invoiceDate": "20260801",
+          "invoiceDueDate": "20260801",
+          "isPayable": true,
+          "isPresentable": true,
+          "isVerifiable": true
+        },
+        {
+          "invoiceNumber": "20103",
+          "invoiceType": "Standard",
+          "consolidatedInvoiceNumber": null,
+          "childInvoiceNumbers": [],
+          "amount": 60.0,
+          "invoiceDate": "20260815",
+          "invoiceDueDate": "20260815",
+          "isPayable": true,
+          "isPresentable": true,
+          "isVerifiable": true
+        }
+      ]
+    }
+  }
+}
