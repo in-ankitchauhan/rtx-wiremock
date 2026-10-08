@@ -9,7 +9,7 @@
     },
     "bodyPatterns": [
       {
-        "contains": "\"phone\": \"+11111111111\""
+        "contains": "\"phone\": \"11111111111\""
       }
     ]
   },
