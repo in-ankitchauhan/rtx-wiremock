@@ -24,7 +24,7 @@
           "email": "alex.zero@example.com",
           "phone": "3333333333"
         },
-        "billToAddress": {
+        "billingAddress": {
           "addressLine1": "1 No Balance Way",
           "addressLine2": "",
           "city": "Dallas",
@@ -40,7 +40,8 @@
           "invoiceDate": "2026-07-01",
           "invoiceDueDate": "2026-08-01",
           "isPayable": false,
-          "isVerifiable": false
+          "isAnnounceable": true,
+          "brand": "TERMINIX"
         }
       ]
     }
