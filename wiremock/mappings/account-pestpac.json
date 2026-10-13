@@ -24,7 +24,7 @@
           "email": "sandy@example.com",
           "phone": "5551234567"
         },
-        "billToAddress": {
+        "billingAddress": {
           "addressLine1": "8625 Hirst Rd",
           "addressLine2": "",
           "city": "Heath",
@@ -51,8 +51,8 @@
           "invoiceDate": "20260715",
           "invoiceDueDate": "20260715",
           "isPayable": true,
-          "isPresentable": true,
-          "isVerifiable": true
+          "isAnnounceable": true,
+          "brand": "TERMINIX"
         },
         {
           "invoiceNumber": "20102",
@@ -63,8 +63,8 @@
           "invoiceDate": "20260801",
           "invoiceDueDate": "20260801",
           "isPayable": true,
-          "isPresentable": true,
-          "isVerifiable": true
+          "isAnnounceable": true,
+          "brand": "TERMINIX"
         },
         {
           "invoiceNumber": "20103",
@@ -75,8 +75,8 @@
           "invoiceDate": "20260815",
           "invoiceDueDate": "20260815",
           "isPayable": true,
-          "isPresentable": true,
-          "isVerifiable": true
+          "isAnnounceable": true,
+          "brand": "TERMINIX"
         }
       ]
     }
