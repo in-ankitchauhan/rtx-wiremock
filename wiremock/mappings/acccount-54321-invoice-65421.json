@@ -24,7 +24,7 @@
           "email": "john.doe@example.com",
           "phone": "2222222222"
         },
-        "billToAddress": {
+        "billingAddress": {
           "addressLine1": "742 Evergreen Terrace",
           "addressLine2": "",
           "city": "Dallas",
@@ -48,23 +48,26 @@
           "invoiceDate": "2026-08-01",
           "invoiceDueDate": "2026-08-31",
           "isPayable": true,
-          "isVerifiable": true
+          "isAnnounceable": true,
+          "brand": "TERMINIX"
         },
         {
-          "invoiceNumber": "222222",
+          "invoiceNumber": "3453453",
           "amount": 175.5,
           "invoiceDate": "2026-07-01",
           "invoiceDueDate": "2026-08-01",
           "isPayable": true,
-          "isVerifiable": true
+          "isAnnounceable": true,
+          "brand": "TERMINIX"
         },
         {
-          "invoiceNumber": "333333",
+          "invoiceNumber": "5765567",
           "amount": 50.0,
           "invoiceDate": "2026-06-01",
           "invoiceDueDate": "2026-07-01",
-          "isPayable": false,
-          "isVerifiable": false
+          "isPayable": true,
+          "isAnnounceable": true,
+          "brand": "TERMINIX"
         }
       ]
     }
