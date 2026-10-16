@@ -1,0 +1,52 @@
+{
+  "request": {
+    "method": "POST",
+    "urlPath": "/api/gateway",
+    "queryParameters": {
+      "api": {
+        "equalTo": "phone_search"
+      }
+    },
+    "bodyPatterns": [
+      {
+        "contains": "\"phone\": \"13214713835\""
+      }
+    ]
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "status": "success",
+      "count": 1,
+      "twilio_lookup": {},
+      "mission_results": [],
+      "pestpac_results": [
+        {
+          "BillToCode": "3698222",
+          "LocationCode": "LOC54321",
+          "LocationID": "10001",
+          "display_name": "John Doe",
+          "CreditStatus": "Good",
+          "Email": "john.doe@example.com",
+          "Phone": "1111111111",
+          "Address": "742 Evergreen Terrace",
+          "City": "Dallas",
+          "State": "TX",
+          "Zip": "75201",
+          "branch_number": "DAL01",
+          "branchID": "DAL",
+          "brand": "Rentokil",
+          "region": "Northeast",
+          "market": "Dallas",
+          "division": "Residential",
+          "pest_service": true,
+          "term_service": false,
+          "lawn_service": false
+        }
+      ]
+    }
+  }
+}
