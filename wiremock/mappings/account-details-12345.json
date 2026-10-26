@@ -62,7 +62,7 @@
           "invoiceDate": "20201115",
           "invoiceDueDate": "20201215",
           "isPayable": true,
-          "isAnnounceable": true,
+          "isAnnounceable": false,
           "brand": "TERMINIX"
         },
          {
@@ -73,7 +73,7 @@
           "invoiceDate": "20201115",
           "invoiceDueDate": "20201215",
           "isPayable": true,
-          "isAnnounceable": true,
+          "isAnnounceable": false,
           "brand": "TERMINIX"
         },
         {
