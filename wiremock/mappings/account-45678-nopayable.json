@@ -5,7 +5,7 @@
     "urlPath": "/customer/account-details",
     "bodyPatterns": [
       {
-        "matchesJsonPath": "$[?(@.accountNumber == '45678']"
+        "matchesJsonPath": "$[?(@.accountNumber == '45678')]"
       }
     ]
   },
