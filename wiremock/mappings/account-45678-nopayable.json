@@ -1,0 +1,48 @@
+{
+  "priority": 10,
+  "request": {
+    "method": "POST",
+    "urlPath": "/customer/account-details",
+    "bodyPatterns": [
+      {
+        "matchesJsonPath": "$[?(@.accountNumber == '45678']"
+      }
+    ]
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "sourceSystem": "PestPac",
+      "accountNumber": "45678",
+      "customer": {
+        "profile": {
+          "firstName": "Sam",
+          "lastName": "Alter",
+          "email": "sam.alter@example.com",
+          "phone": "3214713835"
+        },
+        "billingAddress": {
+          "addressLine1": "w311 s510 hidden hollow",
+          "addressLine2": "",
+          "city": "Dallas",
+          "state": "TX",
+          "zip": "75201"
+        },
+        "serviceAddresses": [
+          {
+            "locationId": "10001",
+            "addressLine1": "w311 s510 hidden hollow",
+            "city": "Dallas",
+            "state": "TX",
+            "zip": "75201"
+          }
+        ]
+      },
+      "invoices": [
+      ]
+    }
+  }
+}
