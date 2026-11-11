@@ -1,7 +1,7 @@
 {
   "priority": 1,
   "request": {
-    "method": "PUT",
+    "method": "POST",
     "urlPath": "/V2/MakeOneTimePayment",
     "bodyPatterns": [
       {
