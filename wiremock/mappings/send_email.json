@@ -2,7 +2,7 @@
   "priority": 5,
   "request": {
     "method": "POST",
-    "urlPath": "/api/email/send"
+    "urlPath": "/v1/notifications/emails/send"
   },
   "response": {
     "status": 202,
