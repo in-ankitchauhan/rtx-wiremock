@@ -1,0 +1,39 @@
+{
+  "priority": 1,
+  "request": {
+    "method": "POST",
+    "urlPath": "/V2/MakeOneTimePayment",
+    "bodyPatterns": [
+      {
+        "matchesJsonPath": {
+          "expression": "$.PaymentMethod.PaymentType",
+          "equalTo": "ACH"
+        }
+      },
+      {
+        "matchesJsonPath": {
+          "expression": "$.PaymentMethod.BankAccountNumber",
+          "equalTo": "123456789"
+        }
+      },
+      {
+        "matchesJsonPath": {
+          "expression": "$.PaymentMethod.BankRoutingNumber",
+          "equalTo": "123456789"
+        }
+      }
+    ]
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "Status": "Success",
+      "StatusReason": "Approved",
+      "TransactionIdentifier": "TXN-ACH-TEST-001",
+      "PestPacBalanceUpdateStatus": "Success"
+    }
+  }
+}
